@@ -8,6 +8,7 @@ using DataAccess.ViewModels;
 
 namespace DataAccess.Models
 {
+    //Telah di clone
     public class Department : BaseModel
     {
         public string Name { get; set; }
