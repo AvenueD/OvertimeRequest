@@ -9,6 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
+    [Table("TB_M_Employees")]
     public class Employee : BaseModel
     {
         public string FirstName { get; set; }
@@ -22,6 +23,7 @@ namespace DataAccess.Models
         public Religion Religion { get; set; }
         public Village Village { get; set; }
         public Position Position { get; set; }
+        public Role Role { get; set; }
 
         public Employee() { } // constructor
         public Employee(EmployeeVM employeeVM)
@@ -46,7 +48,6 @@ namespace DataAccess.Models
             this.Salary = employeeVM.Salary;
             //this.Manager = employeeVM.ManagerId;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
-
         }
         public void Delete()
         {

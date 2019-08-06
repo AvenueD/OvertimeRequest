@@ -23,9 +23,11 @@ namespace DataAccess.Context
         public DbSet<Religion> Religions { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Site> Sites { get; set; }
-        public DbSet<Status> Statuses { get; set; }
+        public DbSet<Approve> Approves { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Village> Villages { get; set; }
+        public DbSet<EmployeeOvertime> EmployeeOvertimes { get; set; }
+
 
     }
 }

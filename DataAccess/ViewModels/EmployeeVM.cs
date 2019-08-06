@@ -29,11 +29,10 @@ namespace DataAccess.ViewModels
         [ForeignKey("Village")]
         public int VillageId { get; set; }
 
-        [ForeignKey("Position")]
-        public int PositionId { get; set; }
-
+        [ForeignKey("Role")]
+        public int RoleId { get; set; }
         public EmployeeVM() { } // constructor
-        public EmployeeVM(string firstname, string lastname, string phonenumber, bool gender, string address, int salary, int religionid, int villageid, int positionid, int managerid, int departmentid)
+        public EmployeeVM(string firstname, string lastname, string phonenumber, bool gender, string address, int salary, int religionid, int villageid, int managerid, int departmentid, int roleid)
         {
             this.FirstName = firstname;
             this.LastName = lastname;
@@ -43,12 +42,11 @@ namespace DataAccess.ViewModels
             this.Salary = salary;
             this.ReligionId = religionid;
             this.VillageId = villageid;
-            this.PositionId = positionid;
             this.ManagerId = managerid;
             this.DepartmentId = departmentid;
         }
 
-        public void Update(string firstname, string lastname, string phonenumber, bool gender, string address, int salary, int religionid, int villageid, int positionid, int managerid, int departmentid)
+        public void Update(string firstname, string lastname, string phonenumber, bool gender, string address, int salary, int religionid, int villageid, int managerid, int departmentid, int roleid)
         {
             this.FirstName = firstname;
             this.LastName = lastname;
@@ -58,7 +56,6 @@ namespace DataAccess.ViewModels
             this.Salary = salary;
             this.ReligionId = religionid;
             this.VillageId = villageid;
-            this.PositionId = positionid;
             this.ManagerId = managerid;
             this.DepartmentId = departmentid;
         }

@@ -13,7 +13,6 @@ namespace DataAccess.Models
     public class Regency : BaseModel
     {
         public string Name { get; set; }
-        public int Province_Id { get; set; }
         public Province Province { get; set; }
 
         public Regency() { }

@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Base;
 using DataAccess.ViewModels;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
     //Telah di clone Clone
+    [Table("TB_M_Departments")]
     public class Department : BaseModel
     {
         public string Name { get; set; }

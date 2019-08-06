@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table("TB_T_OvertimeRequests")]
+    [Table("TB_T_Overtime_Requests")]
     public class OvertimeRequest : BaseModel
     {
         public DateTime? OvertimeDate { get; set; }
         public string UploadFile { get; set; }
         public DateTime? DateApproveRM { get; set; }
         public DateTime? DateApproveFin { get; set; }
-        public Status Status { get; set; }
+        public Approve Approve { get; set; }
         public Site Site { get; set; }
 
         public OvertimeRequest() { }

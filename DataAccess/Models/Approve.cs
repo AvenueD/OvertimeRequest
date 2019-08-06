@@ -9,26 +9,26 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Statuses")]
-    public class Status : BaseModel
+    [Table("TB_M_Approves")]
+    public class Approve : BaseModel
     {
         public string Name { get; set; }
 
-        public Status() { }
+        public Approve() { }
 
-        public Status(StatusVM statusVM)
+        public Approve(ApproveVM approveVM)
         {
-            this.Name = statusVM.Name;
+            this.Name = approveVM.Name;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public void Update(StatusVM statusVM)
+        public void Update(ApproveVM approveVM)
         {
-            this.Name = statusVM.Name;
+            this.Name = approveVM.Name;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public void Delete(StatusVM statusVM)
+        public void Delete(ApproveVM approveVM)
         {
             this.IsDelete = true;
             this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
