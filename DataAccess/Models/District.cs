@@ -14,7 +14,6 @@ namespace DataAccess.Models
     {
         public string Name { get; set; }
 
-        [ForeignKey("Regency")]
         public Regency Regency { get; set; }
 
         public District() { }

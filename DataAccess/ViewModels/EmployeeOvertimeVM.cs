@@ -11,23 +11,27 @@ namespace DataAccess.ViewModels
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public string Activity { get; set; }
-        public int Employee { get; set; }
-        public int OvertimeRequest { get; set; }
+        public int EmployeeId { get; set; }
+        public int OvertimeRequestId { get; set; }
 
         public EmployeeOvertimeVM() { }
 
-        public EmployeeOvertimeVM(TimeSpan starttime, TimeSpan endtime, string activity)
+        public EmployeeOvertimeVM(TimeSpan starttime, TimeSpan endtime, string activity, int employeeid, int overtimerequestid)
         {
             this.StartTime = starttime;
             this.EndTime = endtime;
             this.Activity = activity;
+            this.EmployeeId = employeeid;
+            this.OvertimeRequestId = overtimerequestid;
         }
 
-        public void Update(TimeSpan starttime, TimeSpan endtime, string activity)
+        public void Update(TimeSpan starttime, TimeSpan endtime, string activity, int employeeid, int overtimerequestid)
         {
             this.StartTime = starttime;
             this.EndTime = endtime;
             this.Activity = activity;
+            this.EmployeeId = employeeid;
+            this.OvertimeRequestId = overtimerequestid;
         }
     }
 }

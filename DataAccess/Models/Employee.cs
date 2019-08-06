@@ -9,6 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
+    [Table("TB_M_Employees")]
     public class Employee : BaseModel
     {
         public string FirstName { get; set; }

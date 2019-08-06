@@ -16,7 +16,7 @@ namespace DataAccess.Models
         public string UploadFile { get; set; }
         public DateTime? DateApproveRM { get; set; }
         public DateTime? DateApproveFin { get; set; }
-        public Status Status { get; set; }
+        public Approve Approve { get; set; }
         public Site Site { get; set; }
 
         public OvertimeRequest() { }
@@ -39,7 +39,7 @@ namespace DataAccess.Models
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public void Delete(OvertimeRequestVM overtimerequestVM)
+        public void Delete()
         {
             this.IsDelete = true;
             this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
