@@ -22,7 +22,7 @@ namespace DataAccess.Models
         public Department Department { get; set; }
         public Religion Religion { get; set; }
         public Village Village { get; set; }
-        public Position Position { get; set; }
+        //public Position Position { get; set; }
         public Role Role { get; set; }
 
         public Employee() { } // constructor
