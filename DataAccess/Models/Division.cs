@@ -9,20 +9,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-    public  class Divisi : BaseModel
+    [Table("TB_M_Divisions")]
+    public  class Division : BaseModel
     {
         public string Name { get; set; }
 
-        public Divisi() { }
+        public Division() { }
 
-        public Divisi(DivisiVM divisiVM)
+        public Division(DivisionVM divisionVM)
         {
-            this.Name = divisiVM.Name;
+            this.Name = divisionVM.Name;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
-        public void Update(DivisiVM divisiVM) // Pembuatan Constructor untuk Update
+        public void Update(DivisionVM divisionVM) // Pembuatan Constructor untuk Update
         {
-            this.Name = divisiVM.Name;
+            this.Name = divisionVM.Name;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
         public void Delete() // Pembuatan Constructor untuk Delete

@@ -1,13 +1,16 @@
-﻿using DataAccess.ViewModels;
+﻿using Core.Base;
+using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    public class HistoryApproval
+    [Table("TB_R_History_Approvals")]
+    public class HistoryApproval : BaseModel
     {
         public string EmployeeName { get; set; }
         public DateTime? OvertimeDate { get; set; }

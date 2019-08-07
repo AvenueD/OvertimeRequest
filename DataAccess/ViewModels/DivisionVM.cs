@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess.ViewModels
 {
-    public class DivisiVM
+    public class DivisionVM
     {
         // Apa yang dibutuhkan di View dan Model, yg diinputkan secara sadar diletakan di ViewModel
         public string Name { get; set; }
-        public DivisiVM() { } // constructor
-        public DivisiVM(string name)
+        public DivisionVM() { } // constructor
+        public DivisionVM(string name)
         {
             this.Name = name;
         }
