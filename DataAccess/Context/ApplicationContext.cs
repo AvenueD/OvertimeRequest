@@ -27,7 +27,5 @@ namespace DataAccess.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Village> Villages { get; set; }
         public DbSet<EmployeeOvertime> EmployeeOvertimes { get; set; }
-
-
     }
 }

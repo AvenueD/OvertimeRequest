@@ -28,7 +28,7 @@ namespace DataAccess.Models
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public void Delete(ApproveVM approveVM)
+        public void Delete()
         {
             this.IsDelete = true;
             this.DeleteDate = DateTimeOffset.Now.LocalDateTime;
