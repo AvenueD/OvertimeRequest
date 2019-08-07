@@ -24,13 +24,13 @@ namespace DataAccess.Models
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public virtual void Update(DistrictVM districtVM)
+        public void Update(DistrictVM districtVM)
         {
             this.Name = districtVM.Name;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public virtual void Delete()
+        public void Delete()
         {
             this.IsDelete = true;
             this.DeleteDate = DateTimeOffset.Now.LocalDateTime;

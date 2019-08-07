@@ -13,7 +13,7 @@ namespace DataAccess.Models
     public class Village : BaseModel
     {
         public string Name { get; set; }
-        
+
         public District District { get; set; }
 
         public Village() { }

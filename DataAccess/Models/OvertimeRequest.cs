@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table("TB_T_OvertimeRequests")]
+    [Table("TB_T_Overtime_Requests")]
     public class OvertimeRequest : BaseModel
     {
         public DateTime? OvertimeDate { get; set; }
