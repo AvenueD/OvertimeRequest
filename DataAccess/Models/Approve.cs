@@ -1,4 +1,4 @@
-using Core.Base;
+﻿using Core.Base;
 using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -6,24 +6,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace DataAccess.Models
 {
-    [Table("TB_M_Position")]
-    public class Position : BaseModel
+    [Table("TB_M_Approves")]
+    public class Approve : BaseModel
     {
         public string Name { get; set; }
 
-        public Position() { }
+        public Approve() { }
 
-        public Position(PositionVM positionVM)
+        public Approve(ApproveVM approveVM)
         {
-            this.Name = positionVM.Name;
+            this.Name = approveVM.Name;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
-        public void Update(PositionVM positionVM)
+        public void Update(ApproveVM approveVM)
         {
-            this.Name = positionVM.Name;
+            this.Name = approveVM.Name;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
