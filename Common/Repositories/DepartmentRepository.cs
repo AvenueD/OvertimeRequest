@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 
 namespace Common.Repositories
 {
@@ -25,11 +25,11 @@ namespace Common.Repositories
             return get; //Contextnya,nama table, kondisi
         }
 
-        public List<Department> Get(string value)//Get by Value String
+        /*public List<Department> Get(string value)//Get by Value String
         {
             var get = applicationContext.Departments.Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value)) && x.IsDelete == false).ToList();
             return get;
-        }
+        }*/
 
         public Department Get(int id)//Get by Id
         {
@@ -44,37 +44,38 @@ namespace Common.Repositories
             var result = applicationContext.SaveChanges();
             return result > 0;
         }
-        //public bool Update(int id, DepartmentVM departmentVM)
-        //{
-        //    //Untuk mengambil data By Id
-        //    var get = Get(id);
-        //    if (get != null)
-        //    {
-        //        get.Update(departmentVM);
-        //        applicationContext.Entry(get).State = EntityState.Modified;
-        //        var result = applicationContext.SaveChanges();
-        //        return result > 0;
+        public bool Update(int id, DepartmentVM departmentVM)
+        {
+            //Untuk mengambil data By Id
+            var get = Get(id);
+            if (get != null)
+            {
+                get.Update(departmentVM);
+                applicationContext.Entry(get).State = EntityState.Modified;
+                var result = applicationContext.SaveChanges();
+                return result > 0;
 
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-        //public bool Delete(int id)
-        //{
-        //    var get = Get(id);
-        //    if (get != null)
-        //    {
-        //        get.Delete(); // Parsing
-        //        applicationContext.Entry(get).State = EntityState.Modified;
-        //        var result = applicationContext.SaveChanges();
-        //        return result > 0;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool Delete(int id)
+        {
+            var get = Get(id);
+            if (get != null)
+            {
+                get.Delete(); // Parsing
+                applicationContext.Entry(get).State = EntityState.Modified;
+                var result = applicationContext.SaveChanges();
+                return result > 0;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

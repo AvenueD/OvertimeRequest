@@ -1,7 +1,7 @@
-﻿using DataAccess.Context;
+﻿using Common.Repositories.Interfaces;
+using DataAccess.Context;
 using DataAccess.Models;
 using DataAccess.ViewModels;
-using LeaveRequest.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

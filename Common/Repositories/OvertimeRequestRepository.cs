@@ -20,7 +20,7 @@ namespace Common.Repositories
 
         public List<OvertimeRequest> Get()//Get all
         {
-            var get = applicationContext.OvertimeRequests.Include("Action").Include("Site").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.OvertimeRequests.Include("Approve").Include("Site").Where(x => x.IsDelete == false).ToList();
             return get; //Contextnya,nama table, kondisi
         }
 
@@ -39,9 +39,9 @@ namespace Common.Repositories
         public bool Insert(OvertimeRequestVM overtimerequestVM)
         {
             var push = new OvertimeRequest(overtimerequestVM);
-            var getApprove = applicationContext.Approves.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Approve);
+            var getApprove = applicationContext.Approves.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.ApproveId);
             push.Approve = getApprove;
-            var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Site);
+            var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.SiteId);
             push.Site = getSite;
             applicationContext.OvertimeRequests.Add(push);
             var result = applicationContext.SaveChanges();

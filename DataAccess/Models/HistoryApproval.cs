@@ -24,6 +24,7 @@ namespace DataAccess.Models
             this.OvertimeDate = historyapprovalVM.OvertimeDate;
             this.TotalTime = historyapprovalVM.TotalTime;
             this.Status = historyapprovalVM.Status;
+            this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
     }
 }

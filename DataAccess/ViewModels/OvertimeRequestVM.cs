@@ -36,38 +36,5 @@ namespace DataAccess.ViewModels
             this.ApproveId = approveid;
             this.SiteId = siteid;
         }
-        //public DateTime? OvertimeDate { get; set; }
-        //public string StartTime { get; set; }
-        //public string EndTime { get; set; }
-        //public string UploadFile { get; set; }
-        //public string Activity { get; set; }
-        //public DateTime? DateApproveRM { get; set; }
-        //public DateTime? DateApproveFinn { get; set; }
-        //public int StatusId { get; set; }
-        //public int SiteId { get; set; }
-
-        //public OvertimeRequestVM() { }
-
-        //public OvertimeRequestVM(DateTime? overtimedate, string starttime, string endtime, string uploadfile, string activity, DateTime? dateapproverm, DateTime? dateapprovefinn)
-        //{
-        //    this.OvertimeDate = overtimedate;
-        //    this.StartTime = starttime;
-        //    this.EndTime = endtime;
-        //    this.UploadFile = uploadfile;
-        //    this.Activity = activity;
-        //    this.DateApproveRM = dateapproverm;
-        //    this.DateApproveFinn = dateapprovefinn;
-        //}
-
-        //public void Update(DateTime? overtimedate, string starttime, string endtime, string uploadfile, string activity, DateTime? dateapproverm, DateTime? dateapprovefinn)
-        //{
-        //    this.OvertimeDate = overtimedate;
-        //    this.StartTime = starttime;
-        //    this.EndTime = endtime;
-        //    this.UploadFile = uploadfile;
-        //    this.Activity = activity;
-        //    this.DateApproveRM = dateapproverm;
-        //    this.DateApproveFinn = dateapprovefinn;
-        //}
     }
 }

@@ -12,9 +12,9 @@ namespace Common.Repositories.Interfaces
     {
         List<District> Get();
         District Get(int id);
-        List<District> Get(string value);
+        //List<District> Get(string value);
         bool Insert(DistrictVM districtVM);
-        //bool Update(int id, DistrictVM districtVM);
-        //bool Delete(int id);
+        bool Update(int id, DistrictVM districtVM);
+        bool Delete(int id);
     }
 }

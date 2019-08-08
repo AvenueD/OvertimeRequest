@@ -11,7 +11,7 @@ using DataAccess.Models;
 using Common.Repositories.Interfaces;
 using DataAccess.ViewModels;
 
-namespace UserManagement.Repositories
+namespace Common.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {
@@ -39,12 +39,12 @@ namespace UserManagement.Repositories
             return get;
         }
 
-        public List<Employee> Get(string value)
+        /*public List<Employee> Get(string value)
         {
             //roles di application context class
             var get = applicationContext.Employees.Include("Religion").Include("Role").Include("Village").Include("Department").Where(x => (x.FirstName.Contains(value) || x.FirstName.Contains(value) || x.Id.ToString().Contains(value) || x.Religion.Name.Contains(value)) && x.IsDelete == false).ToList();
             return get;
-        }
+        }*/
 
         public Employee Get(int id)
         {
