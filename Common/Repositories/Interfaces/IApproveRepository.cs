@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeaveRequest.Repositories.Interfaces
+namespace Common.Repositories.Interfaces
 {
-    public interface IActionRepository
+    public interface IApproveRepository
     {
         List<Approve> Get();
         Approve Get(int id);
         //List<Approve> Get(string value);
-        bool Insert(ApproveVM ActionVM);
-        bool Update(int id, ApproveVM ActionVM);
+        bool Insert(ApproveVM approveVM);
+        bool Update(int id, ApproveVM approveVM);
         bool Delete(int id);
     }
 }

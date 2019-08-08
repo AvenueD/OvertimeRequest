@@ -31,13 +31,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<District> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Districts.Include("Regency").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Regency.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
-
         public District Get(int id)
         {
             var get = applicationContext.Districts.SingleOrDefault(x => x.IsDelete == false && x.Id == id);

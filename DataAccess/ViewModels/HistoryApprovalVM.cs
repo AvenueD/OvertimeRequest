@@ -22,5 +22,12 @@ namespace DataAccess.ViewModels
             this.TotalTime = totaltime;
             this.Status = status;
         }
+        public void Update(string employeename, DateTime? overtimedate, int totaltime, string status) // Pembuatan Constructor untuk Update
+        {
+            this.EmployeeName = employeename;
+            this.OvertimeDate = overtimedate;
+            this.TotalTime = totaltime;
+            this.Status = status;
+        }
     }
 }

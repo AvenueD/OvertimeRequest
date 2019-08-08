@@ -15,8 +15,7 @@ namespace DataAccess.Models
         public string Email { get; set; }
 
         public string Password { get; set; }
-
-        public Role RoleId { get; set; }
+        public string StatusActive { get; set; }
 
         public User() { }
 
@@ -24,6 +23,7 @@ namespace DataAccess.Models
         {
             this.Email = userVM.Email;
             this.Password = userVM.Password;
+            this.StatusActive = userVM.StatusActive;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
@@ -31,6 +31,7 @@ namespace DataAccess.Models
         {
             this.Email = userVM.Email;
             this.Password = userVM.Password;
+            this.StatusActive = userVM.StatusActive;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 

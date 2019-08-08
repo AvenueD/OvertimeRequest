@@ -9,24 +9,23 @@ namespace DataAccess.ViewModels
     public class UserVM
     {
         public string Email { get; set; }
-
         public string Password { get; set; }
-        public int RoleId { get; set; }
+        public string StatusActive { get; set; }
 
         public UserVM() { } //constructor
 
-        public UserVM(string email, string password, int roleid)
+        public UserVM(string email, string password, string statusactive)
         {
             this.Email = email;
             this.Password = password;
-            this.RoleId = roleid;
+            this.StatusActive = statusactive;
         }
 
-        public void Update(string email, string password, int roleid)
+        public void Update(string email, string password, string statusactive)
         {
             this.Email = email;
             this.Password = password;
-            this.RoleId = roleid;
+            this.StatusActive = statusactive;
         }
     }
 }

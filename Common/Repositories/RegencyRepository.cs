@@ -31,13 +31,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Regency> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Regencies.Include("Province").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Province.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
-
         public Regency Get(int id)
         {
             var get = applicationContext.Regencies.SingleOrDefault(x => x.IsDelete == false && x.Id == id);

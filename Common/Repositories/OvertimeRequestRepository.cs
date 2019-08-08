@@ -39,9 +39,9 @@ namespace Common.Repositories
         public bool Insert(OvertimeRequestVM overtimerequestVM)
         {
             var push = new OvertimeRequest(overtimerequestVM);
-            var getApprove = applicationContext.Approves.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Approve);
+            var getApprove = applicationContext.Approves.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.ApproveId);
             push.Approve = getApprove;
-            var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Site);
+            var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.SiteId);
             push.Site = getSite;
             applicationContext.OvertimeRequests.Add(push);
             var result = applicationContext.SaveChanges();

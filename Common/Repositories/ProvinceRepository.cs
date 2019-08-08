@@ -31,13 +31,7 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Province> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Provinces.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
-
+      
         public Province Get(int id)
         {
             var get = applicationContext.Provinces.SingleOrDefault(x => x.IsDelete == false && x.Id == id);

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeaveRequest.Repositories.Interfaces
+namespace Common.Repositories.Interfaces
 {
     public interface ISiteRepository
     {
