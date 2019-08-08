@@ -18,6 +18,7 @@ namespace API
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
+
             //Repository
             container.RegisterType<IApproveRepository, ApproveRepository>();
             container.RegisterType<IDepartmentRepository, DepartmentRepository>();
@@ -42,10 +43,15 @@ namespace API
             container.RegisterType<ISiteService, SiteService>();
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IVillageService, VillageService>();
-
-
-
-
+            container.RegisterType<IDepartmentService, DepartmentService>();
+            container.RegisterType<IDistrictService, DistrictService>();
+            container.RegisterType<IEmployeeService, EmployeeService>();
+            container.RegisterType<IProvinceService, ProvinceService>();
+            container.RegisterType<IRegencyService, RegencyService>();
+            container.RegisterType<IReligionService, ReligionService>();
+            container.RegisterType<IOvertimeRequestService, OvertimeRequestService>();
+            container.RegisterType<IEmployeeOvertimeService, EmployeeOvertimeService>();
+          
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

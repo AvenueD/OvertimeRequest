@@ -38,8 +38,15 @@ namespace Common.Repositories
             var get = applicationContext.Employees.OrderByDescending(t => t.Id).FirstOrDefault();
             return get;
         }
+        
+        /*public List<Employee> Get(string value)
+        {
+            //roles di application context class
+            var get = applicationContext.Employees.Include("Religion").Include("Role").Include("Village").Include("Department").Where(x => (x.FirstName.Contains(value) || x.FirstName.Contains(value) || x.Id.ToString().Contains(value) || x.Religion.Name.Contains(value)) && x.IsDelete == false).ToList();
+            return get;
+        }*/
 
-       
+
         public Employee Get(int id)
         {
             var get = applicationContext.Employees.SingleOrDefault(x => x.IsDelete == false && x.Id == id);

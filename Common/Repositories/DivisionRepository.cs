@@ -30,7 +30,7 @@ namespace Common.Repositories
             var get = applicationContext.Divisions.Where(x => x.IsDelete == false).ToList();
             return get;
         }
-
+        
         public Division Get(int id)
         {
             var get = applicationContext.Divisions.SingleOrDefault(x => x.IsDelete == false && x.Id == id);

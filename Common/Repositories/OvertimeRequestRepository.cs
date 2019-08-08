@@ -20,7 +20,7 @@ namespace Common.Repositories
 
         public List<OvertimeRequest> Get()//Get all
         {
-            var get = applicationContext.OvertimeRequests.Include("Action").Include("Site").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.OvertimeRequests.Include("Approve").Include("Site").Where(x => x.IsDelete == false).ToList();
             return get; //Contextnya,nama table, kondisi
         }
 

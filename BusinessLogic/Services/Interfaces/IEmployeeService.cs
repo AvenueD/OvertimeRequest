@@ -15,7 +15,7 @@ namespace BusinessLogic.Services.Interfaces
         Employee GetLast();
         //List<Employee> Get(string value);
         bool Insert(EmployeeVM employeeVM);
-        //bool Update(int id, EmployeeVM employeeVM);
-        //bool Delete(int id);
+        bool Update(int id, EmployeeVM employeeVM);
+        bool Delete(int id);
     }
 }

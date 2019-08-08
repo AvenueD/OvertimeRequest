@@ -1,4 +1,5 @@
-﻿using DataAccess.Context;
+﻿using Common.Repositories.Interfaces;
+using DataAccess.Context;
 using DataAccess.Models;
 using DataAccess.ViewModels;
 using Common.Repositories.Interfaces;
@@ -34,7 +35,7 @@ namespace Common.Repositories
             return get;
         }
 
-        public bool Insert(SiteVM SiteVM)
+        public bool Insert(SiteVM SiteVM) 
         {
             var push = new Site(SiteVM);
             applicationContext.Sites.Add(push);
