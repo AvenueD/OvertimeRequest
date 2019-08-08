@@ -1,31 +1,34 @@
+﻿using Core.Base;
+using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Core.Base;
-using DataAccess.ViewModels;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-    public  class Divisi : BaseModel
+    [Table("TB_M_Approves")]
+    public class Approve : BaseModel
     {
         public string Name { get; set; }
 
-        public Divisi() { }
+        public Approve() { }
 
-        public Divisi(DivisiVM divisiVM)
+        public Approve(ApproveVM approveVM)
         {
-            this.Name = divisiVM.Name;
+            this.Name = approveVM.Name;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
-        public void Update(DivisiVM divisiVM) // Pembuatan Constructor untuk Update
+
+        public void Update(ApproveVM approveVM)
         {
-            this.Name = divisiVM.Name;
+            this.Name = approveVM.Name;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
-        public void Delete() // Pembuatan Constructor untuk Delete
+
+        public void Delete()
         {
             this.IsDelete = true;
             this.DeleteDate = DateTimeOffset.Now.LocalDateTime;

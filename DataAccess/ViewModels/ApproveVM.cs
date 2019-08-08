@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataAccess.ViewModels
 {
-    public class StatusVM
+    public class ApproveVM
     {
         public string Name { get; set; }
 
-        public StatusVM() { }
+        public ApproveVM() { }
 
-        public StatusVM(string name)
+        public ApproveVM(string name)
         {
             this.Name = name;
         }

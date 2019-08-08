@@ -1,34 +1,32 @@
-﻿using Core.Base;
-using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Base;
+using DataAccess.ViewModels;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-    [Table("TB_M_Statuses")]
-    public class Status : BaseModel
+    [Table("TB_M_Divisions")]
+    public  class Division : BaseModel
     {
         public string Name { get; set; }
 
-        public Status() { }
+        public Division() { }
 
-        public Status(StatusVM statusVM)
+        public Division(DivisionVM divisionVM)
         {
-            this.Name = statusVM.Name;
+            this.Name = divisionVM.Name;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
-
-        public void Update(StatusVM statusVM)
+        public void Update(DivisionVM divisionVM) // Pembuatan Constructor untuk Update
         {
-            this.Name = statusVM.Name;
+            this.Name = divisionVM.Name;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
-
-        public void Delete(StatusVM statusVM)
+        public void Delete() // Pembuatan Constructor untuk Delete
         {
             this.IsDelete = true;
             this.DeleteDate = DateTimeOffset.Now.LocalDateTime;

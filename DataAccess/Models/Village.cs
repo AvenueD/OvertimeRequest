@@ -14,7 +14,6 @@ namespace DataAccess.Models
     {
         public string Name { get; set; }
 
-        [ForeignKey("District")]
         public District District { get; set; }
 
         public Village() { }
