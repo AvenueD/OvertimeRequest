@@ -8,13 +8,13 @@ using DataAccess.ViewModels;
 
 namespace BusinessLogic.Services.Interfaces
 {
-    public interface IDivisionService
+    public interface IVillageService
     {
-        List<Division> Get();
-        Division Get(int id);
-        //List<Division> Get(string value);
-        bool Insert(DivisionVM divisionVM);
-        bool Update(int id, DivisionVM divisionVM);
+        List<Village> Get();
+        Village Get(int id);
+        //List<Village> Get(string value);
+        bool Insert(VillageVM villageVM);
+        bool Update(int id, VillageVM villageVM);
         bool Delete(int id);
     }
 }

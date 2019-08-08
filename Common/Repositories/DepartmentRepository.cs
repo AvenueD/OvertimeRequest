@@ -30,7 +30,7 @@ namespace Common.Repositories
             var get = applicationContext.Departments.Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value)) && x.IsDelete == false).ToList();
             return get;
         }*/
-
+        
         public Department Get(int id)//Get by Id
         {
             var get = applicationContext.Departments.SingleOrDefault(x => x.IsDelete == false && x.Id == id);

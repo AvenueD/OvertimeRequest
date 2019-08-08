@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Services.Interfaces
 {
-    public interface IDepartmentService
+    public interface ISiteService
     {
-        List<Department> Get();
-        Department Get(int id);
-        //List<Department> Get(string value);
-        bool Insert(DepartmentVM departmentVM);
-        bool Update(int id, DepartmentVM departmentVM);
+        List<Site> Get();
+        Site Get(int id);
+        //List<Site> Get(string value);
+        bool Insert(SiteVM siteVM);
+        bool Update(int id, SiteVM siteVM);
         bool Delete(int id);
-
     }
 }

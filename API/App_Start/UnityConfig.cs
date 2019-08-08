@@ -19,15 +19,30 @@ namespace API
 
             // e.g. container.RegisterType<ITestService, TestService>();
 
+            //Repository
+            container.RegisterType<IApproveRepository, ApproveRepository>();
             container.RegisterType<IDepartmentRepository, DepartmentRepository>();
             container.RegisterType<IDistrictRepository, DistrictRepository>();
+            container.RegisterType<IDivisionRepository, DivisionRepository>();
             container.RegisterType<IEmployeeRepository, EmployeeRepository>();
+            container.RegisterType<IHistoryApprovalRepository, HistoryApprovalRepository>();
+            container.RegisterType<IEmployeeOvertimeRepository, EmployeeOvertimeRepository>();
+            container.RegisterType<IOvertimeRequestRepository, OvertimeRequestRepository>();
             container.RegisterType<IProvinceRepository, ProvinceRepository>();
             container.RegisterType<IRegencyRepository, RegencyRepository>();
             container.RegisterType<IReligionRepository, ReligionRepository>();
-            container.RegisterType<IOvertimeRequestRepository, OvertimeRequestRepository>();
-            container.RegisterType<IEmployeeOvertimeRepository, EmployeeOvertimeRepository>();
-
+            container.RegisterType<IRoleRepository, RoleRepository>();
+            container.RegisterType<ISiteRepository, SiteRepository>();
+            container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<IVillageRepository, VillageRepository>();
+            //Service
+            container.RegisterType<IApproveService, ApproveService>();
+            container.RegisterType<IDivisionService, DivisionService>();
+            container.RegisterType<IHistoryApprovalService, HistoryApprovalService>();
+            container.RegisterType<IRoleService, RoleService>();
+            container.RegisterType<ISiteService, SiteService>();
+            container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IVillageService, VillageService>();
             container.RegisterType<IDepartmentService, DepartmentService>();
             container.RegisterType<IDistrictService, DistrictService>();
             container.RegisterType<IEmployeeService, EmployeeService>();
@@ -36,8 +51,7 @@ namespace API
             container.RegisterType<IReligionService, ReligionService>();
             container.RegisterType<IOvertimeRequestService, OvertimeRequestService>();
             container.RegisterType<IEmployeeOvertimeService, EmployeeOvertimeService>();
-
-
+          
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }

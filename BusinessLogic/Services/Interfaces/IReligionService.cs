@@ -16,5 +16,6 @@ namespace BusinessLogic.Services.Interfaces
         bool Insert(ReligionVM religionVM);
         bool Update(int id, ReligionVM religionVM);
         bool Delete(int id);
+
     }
 }

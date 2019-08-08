@@ -16,14 +16,14 @@ namespace DataAccess.Models
         public Site(SiteVM siteVM)
         {
             this.Name = siteVM.Name;
-            this.Address = siteVM.Adrress;
+            this.Address = siteVM.Address;
             this.CreateDate = DateTimeOffset.Now.LocalDateTime;
         }
 
         public void Update(SiteVM siteVM)
         {
             this.Name = siteVM.Name;
-            this.Address = siteVM.Adrress;
+            this.Address = siteVM.Address;
             this.UpdateDate = DateTimeOffset.Now.LocalDateTime;
         }
 

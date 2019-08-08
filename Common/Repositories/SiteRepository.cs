@@ -2,6 +2,7 @@
 using DataAccess.Context;
 using DataAccess.Models;
 using DataAccess.ViewModels;
+using Common.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

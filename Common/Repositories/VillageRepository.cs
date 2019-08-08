@@ -9,7 +9,7 @@ using DataAccess.Models;
 using Common.Repositories.Interfaces;
 using DataAccess.ViewModels;
 
-namespace UserManagement.Repositories
+namespace Common.Repositories
 {
     public class VillageRepository : IVillageRepository
     {
@@ -37,7 +37,7 @@ namespace UserManagement.Repositories
             var get = applicationContext.Villages.Include("District").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.District.Name.Contains(value)) && x.IsDelete == false).ToList();
             return get;
         }*/
-
+        
         public Village Get(int id)
         {
             var get = applicationContext.Villages.SingleOrDefault(x => x.IsDelete == false && x.Id == id);

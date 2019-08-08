@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace Common.Repositories.Interfaces
 {
-    public interface IApproveRepository
+    public interface IUserRepository
     {
-        List<Approve> Get();
-        Approve Get(int id);
-        //List<Approve> Get(string value);
-        bool Insert(ApproveVM approveVM);
-        bool Update(int id, ApproveVM approveVM);
+        //Interface hanya membuat method kosong
+        List<User> Get();
+        User Get(int id);
+        List<User> Get(string value);
+        bool Insert(UserVM userVM);
+        bool Update(int id, UserVM userVM);
         bool Delete(int id);
     }
 }

@@ -17,7 +17,6 @@ namespace DataAccess.Context
         public DbSet<Employee> Employees { get; set; }
         public DbSet<HistoryApproval> HistoryApprovals { get; set; }
         public DbSet<OvertimeRequest> OvertimeRequests { get; set; }
-        public DbSet<Position> Positions { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<Regency> Regencies { get; set; }
         public DbSet<Religion> Religions { get; set; }

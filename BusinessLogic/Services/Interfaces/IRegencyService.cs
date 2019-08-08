@@ -16,5 +16,6 @@ namespace BusinessLogic.Services.Interfaces
         bool Insert(RegencyVM regencyVM);
         bool Update(int id, RegencyVM regencyVM);
         bool Delete(int id);
+
     }
 }
