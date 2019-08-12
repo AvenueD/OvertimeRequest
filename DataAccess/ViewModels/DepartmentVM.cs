@@ -10,14 +10,18 @@ namespace DataAccess.ViewModels
     {
         public string Name { get; set; }
 
+        public int DivisionId { get; set; }
+
         public DepartmentVM() { }
-        public DepartmentVM(string name)
+        public DepartmentVM(string name, int divisionid)
         {
             this.Name = name;
+            this.DivisionId = divisionid;
         }
-        public void Update(string name) // Pembuatan Constructor untuk Update
+        public void Update(string name, int divisionid) // Pembuatan Constructor untuk Update
         {
             this.Name = name;
+            this.DivisionId = divisionid;
         }
     }
    

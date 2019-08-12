@@ -21,7 +21,7 @@ namespace Common.Repositories
 
         public List<Department> Get()//Get all
         {
-            var get = applicationContext.Departments.Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Departments.Include("Division").Where(x => x.IsDelete == false).ToList();
             return get; //Contextnya,nama table, kondisi
         }
 
@@ -33,7 +33,7 @@ namespace Common.Repositories
         
         public Department Get(int id)//Get by Id
         {
-            var get = applicationContext.Departments.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = applicationContext.Departments.Include("Division").SingleOrDefault(x => x.IsDelete == false && x.Id == id);
             return get;
         }
 

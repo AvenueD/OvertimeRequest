@@ -29,7 +29,13 @@ namespace Common.Repositories
 
         public List<Employee> Get()
         {
-            var get = applicationContext.Employees.Include("Religion").Include("Role").Include("Village").Include("Department").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Employees.
+                Include("Manager").
+                Include("Religion").
+                Include("Role").
+                Include("Village.District.Regency.Province").
+                Include("Department.Division")
+                .Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
@@ -49,7 +55,13 @@ namespace Common.Repositories
 
         public Employee Get(int id)
         {
-            var get = applicationContext.Employees.SingleOrDefault(x => x.IsDelete == false && x.Id == id);
+            var get = applicationContext.Employees.
+                Include("Manager").
+                Include("Religion").
+                Include("Role").
+                Include("Village.District.Regency.Province").
+                Include("Department.Division").
+                SingleOrDefault(x => x.IsDelete == false && x.Id == id);
             return get;
         }
 
