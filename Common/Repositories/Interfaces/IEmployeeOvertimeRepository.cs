@@ -14,7 +14,7 @@ namespace Common.Repositories.Interfaces
         EmployeeOvertime Get(int id);
         //List<OvertimeRequest> Get(string value);
         bool Insert(EmployeeOvertimeVM employeeovertimeVM);
-        //bool Update(OvertimeRequestVM overtimerequestVM);
-        //bool Delete(int id);
+        bool Update(int id, EmployeeOvertimeVM employeeovertimeVM);
+        bool Delete(int id);
     }
 }

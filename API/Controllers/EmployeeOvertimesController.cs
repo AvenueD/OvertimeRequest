@@ -48,7 +48,8 @@ namespace API.Controllers
         }
 
         // PUT: api/EmployeeOvertimes/5
-        /*public HttpResponseMessage UpdateEmployeeOvertime(int id, EmployeeOvertimeVM employeeOvertimeVM)
+        [HttpPut]
+        public HttpResponseMessage UpdateEmployeeOvertime(int id, EmployeeOvertimeVM employeeOvertimeVM)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");
             if (string.IsNullOrWhiteSpace(id.ToString()))
@@ -65,7 +66,7 @@ namespace API.Controllers
                 }
             }
             return message;
-        }*/
+        }
 
         // POST: api/EmployeeOvertimes
         public HttpResponseMessage InsertEmployeeOvertime(EmployeeOvertimeVM employeeOvertimeVM)
@@ -80,7 +81,7 @@ namespace API.Controllers
         }
 
         // DELETE: api/EmployeeOvertimes/5
-        /*public HttpResponseMessage DeleteEmployeeOvertime(int id)
+        public HttpResponseMessage DeleteEmployeeOvertime(int id)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Bad Request");
             if (string.IsNullOrWhiteSpace(id.ToString()))
@@ -96,6 +97,6 @@ namespace API.Controllers
                 }
             }
             return message;
-        }*/
+        }
     }
 }

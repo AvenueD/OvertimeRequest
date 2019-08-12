@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.ViewModels
 {
-    public class OvertimeRequestVM
+    public class OvertimeRequestVM  
     {
         public DateTime? OvertimeDate { get; set; }
         public string UploadFile { get; set; }
