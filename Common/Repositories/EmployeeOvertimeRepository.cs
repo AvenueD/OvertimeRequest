@@ -20,7 +20,12 @@ namespace Common.Repositories
 
         public List<EmployeeOvertime> Get()//Get all
         {
-            var get = applicationContext.EmployeeOvertimes.Include("Employee").Include("OvertimeRequest").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.EmployeeOvertimes.
+                Include("Employee").
+                Include("OvertimeRequest").
+                Include("OvertimeRequest.Site").
+                Include("OvertimeRequest.Approve").
+                Where(x => x.IsDelete == false).ToList();
             return get; //Contextnya,nama table, kondisi
         }
 
@@ -48,17 +53,17 @@ namespace Common.Repositories
             return result > 0;
         }
 
-        /*public bool Update(OvertimeRequestVM overtimerequestVM)
+        public bool Update(int id, EmployeeOvertimeVM employeeovertimeVM)
         {
             //Untuk mengambil data By Id
             var get = Get(id);
             if (get != null)
             {
-                get.Update(overtimerequestVM);
-                var getAction = applicationContext.Actions.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Action);
-                get.Action = getAction;
-                var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Site);
-                get.Site = getSite;
+                get.Update(employeeovertimeVM);
+                var getEmployee = applicationContext.Employees.SingleOrDefault(x => x.IsDelete == false && x.Id == employeeovertimeVM.EmployeeId);
+                get.Employee = getEmployee;
+                var getOvertime = applicationContext.OvertimeRequests.SingleOrDefault(x => x.IsDelete == false && x.Id == employeeovertimeVM.OvertimeRequestId);
+                get.OvertimeRequest = getOvertime;
                 applicationContext.Entry(get).State = EntityState.Modified;
                 var result = applicationContext.SaveChanges();
                 return result > 0;
@@ -67,9 +72,9 @@ namespace Common.Repositories
             {
                 return false;
             }
-        }*/
+        }
 
-        /*public bool Delete(int id)
+        public bool Delete(int id)
         {
             var get = Get(id);
             if (get != null)
@@ -83,6 +88,6 @@ namespace Common.Repositories
             {
                 return false;
             }
-        }*/
+        }
     }
 }

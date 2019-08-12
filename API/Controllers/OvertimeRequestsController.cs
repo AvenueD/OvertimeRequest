@@ -48,7 +48,8 @@ namespace API.Controllers
         }
 
         // PUT: api/OvertimeRequests/5
-        /*public HttpResponseMessage UpdateOvertimeRequest(int id, OvertimeRequestVM overtimeRequestVM)
+        [HttpPut]
+        public HttpResponseMessage UpdateOvertimeRequest(int id, OvertimeRequestVM overtimeRequestVM)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Bad Request");
             if (string.IsNullOrWhiteSpace(id.ToString()))
@@ -65,7 +66,7 @@ namespace API.Controllers
                 }
             }
             return message;
-        }*/
+        }
 
         // POST: api/OvertimeRequests
         public HttpResponseMessage InsertOvertimeRequest(OvertimeRequestVM overtimeRequestVM)
@@ -80,7 +81,7 @@ namespace API.Controllers
         }
 
         // DELETE: api/Provinces/5
-        /*public HttpResponseMessage DeleteOvertimeRequest(int id)
+        public HttpResponseMessage DeleteOvertimeRequest(int id)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Bad Request");
             if (string.IsNullOrWhiteSpace(id.ToString()))
@@ -96,6 +97,6 @@ namespace API.Controllers
                 }
             }
             return message;
-        }*/
+        }
     }
 }

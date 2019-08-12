@@ -14,7 +14,7 @@ namespace BusinessLogic.Services.Interfaces
         OvertimeRequest Get(int id);
         //List<OvertimeRequest> Get(string value);
         bool Insert(OvertimeRequestVM overtimeRequestVM);
-        //bool Update(OvertimeRequestVM overtimerequestVM);
-        //bool Delete(int id);
+        bool Update(int id, OvertimeRequestVM overtimerequestVM);
+        bool Delete(int id);
     }
 }
