@@ -39,7 +39,7 @@ namespace Common.Repositories
         public bool Insert(OvertimeRequestVM overtimerequestVM)
         {
             var push = new OvertimeRequest(overtimerequestVM);
-            var getApprove = applicationContext.Approves.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.ApproveId);
+            var getApprove = applicationContext.Approves.SingleOrDefault(x => x.IsDelete == false && x.Id == 1);
             push.Approve = getApprove;
             var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.SiteId);
             push.Site = getSite;
@@ -48,16 +48,16 @@ namespace Common.Repositories
             return result > 0;
         }
 
-        /*public bool Update(OvertimeRequestVM overtimerequestVM)
+        public bool Update(int id, OvertimeRequestVM overtimerequestVM)
         {
             //Untuk mengambil data By Id
             var get = Get(id);
             if (get != null)
             {
                 get.Update(overtimerequestVM);
-                var getAction = applicationContext.Actions.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Action);
-                get.Action = getAction;
-                var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.Site);
+                var getApprove = applicationContext.Approves.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.ApproveId);
+                get.Approve = getApprove;
+                var getSite = applicationContext.Sites.SingleOrDefault(x => x.IsDelete == false && x.Id == overtimerequestVM.SiteId);
                 get.Site = getSite;
                 applicationContext.Entry(get).State = EntityState.Modified;
                 var result = applicationContext.SaveChanges();
@@ -67,9 +67,9 @@ namespace Common.Repositories
             {
                 return false;
             }
-        }*/
+        }
 
-        /*public bool Delete(int id)
+        public bool Delete(int id)
         {
             var get = Get(id);
             if (get != null)
@@ -83,6 +83,6 @@ namespace Common.Repositories
             {
                 return false;
             }
-        }*/
+        }
     }
 }

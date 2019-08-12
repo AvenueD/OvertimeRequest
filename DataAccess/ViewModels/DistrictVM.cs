@@ -12,7 +12,7 @@ namespace DataAccess.ViewModels
         // Apa yang dibutuhkan di View dan Model, yg diinputkan secara sadar diletakan di ViewModel
         public string Name { get; set; }
         
-        [ForeignKey("Religion")]
+        [ForeignKey("Regency")]
         public int RegencyId { get; set; }
 
         public DistrictVM() { } // constructor

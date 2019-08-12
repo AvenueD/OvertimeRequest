@@ -45,7 +45,7 @@ namespace BusinessLogic.Services
 
         public bool Insert(OvertimeRequestVM overtimerequestVM)
         {
-            if(string.IsNullOrWhiteSpace(overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.UploadFile.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.DateApproveRM.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.DateApproveFin.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.ApproveId.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.SiteId.ToString()))
+            if (string.IsNullOrWhiteSpace(overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.UploadFile.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.SiteId.ToString()))
             {
                 return status;
             }
@@ -56,9 +56,9 @@ namespace BusinessLogic.Services
             }
         }
 
-        /*public bool Update(int id, OvertimeRequestVM overtimerequestVM)
+        public bool Update(int id, OvertimeRequestVM overtimerequestVM)
         {
-            if (string.IsNullOrWhiteSpace(Id.ToString()) || overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.UploadFile.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.DateApproveRM.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.DateApproveFin.ToString()))
+            if (string.IsNullOrWhiteSpace(id.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.OvertimeDate.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.UploadFile.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.DateApproveRM.ToString()) || string.IsNullOrWhiteSpace(overtimerequestVM.DateApproveFin.ToString()))
             {
                 return status;
             }
@@ -67,9 +67,9 @@ namespace BusinessLogic.Services
                 var result = _overtimeRequestRepository.Update(id, overtimerequestVM);
                 return result;
             }
-        }*/
+        }
 
-        /*public bool Delete(int id)
+        public bool Delete(int id)
         {
             if (string.IsNullOrWhiteSpace(id.ToString()))
             {
@@ -80,6 +80,6 @@ namespace BusinessLogic.Services
                 var result = _overtimeRequestRepository.Delete(id);
                 return result;
             }
-        }*/
+        }
     }
 }

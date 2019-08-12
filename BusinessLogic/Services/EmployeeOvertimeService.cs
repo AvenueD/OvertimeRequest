@@ -54,5 +54,29 @@ namespace BusinessLogic.Services
                 return result;
             }
         }
+        public bool Update(int id, EmployeeOvertimeVM employeeovertimeVM)
+        {
+            if (string.IsNullOrWhiteSpace(id.ToString()) || string.IsNullOrWhiteSpace(employeeovertimeVM.EndTime.ToString()) || string.IsNullOrWhiteSpace(employeeovertimeVM.Activity.ToString()) || string.IsNullOrWhiteSpace(employeeovertimeVM.EmployeeId.ToString()) || string.IsNullOrWhiteSpace(employeeovertimeVM.OvertimeRequestId.ToString()))
+            {
+                return status;
+            }
+            else
+            {
+                var result = _employeeOvertimeRepository.Update(id, employeeovertimeVM);
+                return result;
+            }
+        }
+        public bool Delete(int id)
+        {
+            if (string.IsNullOrWhiteSpace(id.ToString()))
+            {
+                return status;
+            }
+            else
+            {
+                var result = _employeeOvertimeRepository.Delete(id);
+                return result;
+            }
+        }
     }
 }
