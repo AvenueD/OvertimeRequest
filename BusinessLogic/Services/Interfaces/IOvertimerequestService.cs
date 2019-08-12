@@ -13,7 +13,7 @@ namespace BusinessLogic.Services.Interfaces
         List<OvertimeRequest> Get();
         OvertimeRequest Get(int id);
         //List<OvertimeRequest> Get(string value);
-        bool Insert(OvertimeRequestVM overtimerequestVM);
+        bool Insert(OvertimeRequestVM overtimeRequestVM);
         //bool Update(OvertimeRequestVM overtimerequestVM);
         //bool Delete(int id);
     }
